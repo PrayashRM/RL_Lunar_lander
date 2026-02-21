@@ -20,8 +20,7 @@ model-index:
       name: mean_reward
       verified: false
 widget:
-- id: "YOUR_HF_USERNAME/ppo-LunarLander-v2"
-  src: "replay.mp4"
+- src: "https://huggingface.co/Subcon/ppo-LunarLander-v2/resolve/main/videos/replay.mp4"
   type: video
 ---
 
@@ -29,13 +28,7 @@ widget:
 
 This is a trained model of a **PPO (Proximal Policy Optimization)** agent playing **LunarLander-v2** using the [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) library.
 
-The agent has been trained to land safely between the yellow flags, optimizing for fuel efficiency and landing stability.
-
-### 🎥 Agent Performance
-<div align="center">
-  <h3>🤖 Watch the Agent Land!</h3>
-  <video controls autoplay loop muted src="https://huggingface.co/Subcon/ppo-LunarLander-v2/resolve/main/replay.mp4" width="100%"></video>
-</div>
+The agent has been trained to land safely between the yellow flags, optimizing for fuel efficiency and landing stability
 
 ### 🏆 Metrics
 - **Mean Reward:** `276.50 +/- 26.10`
@@ -68,5 +61,6 @@ while not done:
     action, _ = model.predict(obs)
     obs, _states, done, info = env.step(action)
     env.render()
+
 
 
