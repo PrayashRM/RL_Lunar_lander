@@ -48,9 +48,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 env = DummyVecEnv([lambda: gym.make("LunarLander-v2", render_mode="human")])
 
 # 2. Load the trained model (from Hugging Face)
-# Note: You need to replace "YOUR_HF_USERNAME" with your actual username
 model = PPO.load_from_hub(
-    repo_id="YOUR_HF_USERNAME/ppo-LunarLander-v2",
+    repo_id="Subcon/ppo-LunarLander-v2",
     filename="ppo-LunarLander-v2.zip",
 )
 
@@ -61,6 +60,7 @@ while not done:
     action, _ = model.predict(obs)
     obs, _states, done, info = env.step(action)
     env.render()
+
 
 
 
