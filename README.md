@@ -32,10 +32,7 @@ This is a trained model of a **PPO (Proximal Policy Optimization)** agent playin
 The agent has been trained to land safely between the yellow flags, optimizing for fuel efficiency and landing stability.
 
 ### 🎥 Agent Performance
-<div align="center">
-  <video controls autoplay loop muted src="https://huggingface.co/YOUR_HF_USERNAME/ppo-LunarLander-v2/resolve/main/replay.mp4" width="60%">
-  </video>
-</div>
+<video controls autoplay loop muted src="https://huggingface.co/Subcon/ppo-LunarLander-v2/resolve/main/replay.mp4" width="100%"></video>
 
 ### 🏆 Metrics
 - **Mean Reward:** `276.50 +/- 26.10`
@@ -68,3 +65,4 @@ while not done:
     action, _ = model.predict(obs)
     obs, _states, done, info = env.step(action)
     env.render()
+
